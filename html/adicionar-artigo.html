@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar</title>
+</head>
+<body>
+    <h1>Adicionar artigo</h1>
+    <form action="http://localhost:3001/adicionar-carro" method="post">
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" name="categoria" required><br>
+
+        <label for="nomeArtigo">Nome do Artigo:</label>
+        <input type="text" name="nomeArtigo" id="nomeArtigo" required></input><br>
+
+        <label for="artigo">Artigo:</label>
+        <input type="text" id="artigo" name="artigo" required><br>
+        
+        <label for="urlFoto">Url da foto:</label>
+        <input type="text" id="urlFoto" name="urlFoto" required><br>
+
+        <button type="submit"> Adicionar artigo</button>
+    </form>
+</body>
+</html>

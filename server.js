@@ -37,7 +37,7 @@ app.post('/adicionar-artigo', (req, res) => {
 
     salvarDados();
 
-    res.send('<h1> Artigo adicionado com sucesso! </h1>');
+    res.send('<h1> Artigo adicionado com sucesso! </h1> <br><a href="http://localhost:3001/adicionar-artigo">Adicionar Artigos</a><br><a href="http://localhost:3001/buscar-artigo">Buscar por Artigos</a><br><a href="http://localhost:3001/categoria-artigo">Buscar por Categoria</a>');
 });
 
 function buscarArtigoPorNome(nome) {
@@ -55,22 +55,24 @@ app.post('/buscar-artigo', (req, res) => {
     const artigoEncontrado = buscarArtigoPorNome(nomeArtigoBuscado);
 
     if (artigoEncontrado) {
-        res.send(`<h1>Artigo encontrado:</h1> <pre>
-        ${JSON.stringify(artigoEncontrado, null, 2)}</pre>`);
+        res.send(`<h1>Artigo encontrado:</h1> <pre>${JSON.stringify(artigoEncontrado, null, 2)}</pre> <br><a href="http://localhost:3001/adicionar-artigo">Adicionar Artigos</a><br><a href="http://localhost:3001/buscar-artigo">Buscar por Artigos</a><br><a href="http://localhost:3001/categoria-artigo">Buscar por Categoria</a>`);
     } else {
-        res.send('<h1>Artigo não encontrado.</h1>');
+        res.send('<h1>Artigo não encontrado.</h1> <br><a href="http://localhost:3001/adicionar-artigo">Adicionar Artigos</a><br><a href="http://localhost:3001/buscar-artigo">Buscar por Artigos</a><br><a href="http://localhost:3001/categoria-artigo">Buscar por Categoria</a>');
     }
 });
 
-categoriasArtigos = ""
+
 
 function buscarArtigoPorCategoria(nome) {
+    let categoriasArtigos = ""; 
 
-    return artigos.forEach(artigo => {
+    artigos.forEach(artigo => {
         if(artigo.categoria.toLowerCase() === nome.toLowerCase()){
-            categoriasArtigos += `${JSON.stringify(artigoEncontrado, null, 2)} <br>`
+            categoriasArtigos += `${JSON.stringify(artigo, null, 2)}\n`;
         }
     });
+
+    return categoriasArtigos; 
 }
 
 app.get('/categoria-artigo', (req, res) =>{
@@ -79,17 +81,16 @@ app.get('/categoria-artigo', (req, res) =>{
 
 app.post('/categoria-artigo', (req, res) => {
     
-    const nomeCategoriaBuscada = req.body.categoria
+    const nomeCategoriaBuscada = req.body.categoria;
 
-    buscarArtigoPorCategoria(nomeCategoriaBuscada);
+    const categoriasArtigos = buscarArtigoPorCategoria(nomeCategoriaBuscada);
 
     if (categoriasArtigos !== "") {
-        res.send(`<h1>Artigo encontrado:</h1> <pre> ${categoriasArtigos} </pre>`);
+        res.send(`<h1>Artigos encontrados:</h1> <pre> ${categoriasArtigos} </pre> <br><a href="http://localhost:3001/adicionar-artigo">Adicionar Artigos</a><br><a href="http://localhost:3001/buscar-artigo">Buscar por Artigos</a><br><a href="http://localhost:3001/categoria-artigo">Buscar por Categoria</a>`);
     } else {
-        res.send('<h1>Artigo não encontrado.</h1>');
+        res.send('<h1>Nenhum artigo encontrado.</h1> <br><a href="http://localhost:3001/adicionar-artigo">Adicionar Artigos</a><br><a href="http://localhost:3001/buscar-artigo">Buscar por Artigos</a><br><a href="http://localhost:3001/categoria-artigo">Buscar por Categoria</a>');
     }
 });
-
 
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}/index`);

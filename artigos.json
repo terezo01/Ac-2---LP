@@ -1,27 +1,32 @@
 [
-    {   
-        "categoria": "Biologia",
-        "nomeArtigo": "Biologia marinha",
-        "artigo": "https://www.bioicos.org.br/artigos",
-        "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d13-54fe7b090e0c4b0d42b3347d24af1e43/views/imgo"
-    },
-    {   
-        "categoria": "Quimica ",
-        "nomeArtigo": "Quimica orgânica",
-        "artigo": "https://www.scielo.br/j/qn/a/TnNHfB8y4R3BMzgmvnyqqSJ/",
-        "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d5-c872059e4d0638e2dc03f26aa00846fb/views/imgo"
-    },
-    {   
-        "categoria": "Fisica",
-        "nomeArtigo": "Astrofisica",
-        "artigo": "https://fapesp.br/publicacoes/2015/astrofisica.pdf",
-        "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d11-4ccabcda6723b9a603f9bb405339bd52/views/imgo"
-    },
-    {   
-        "categoria": "Quimica ",
-        "nomeArtigo": "Cinetica",
-        "artigo": "https://econtents.bc.unicamp.br/inpec/index.php/chemkeys/article/view/18747?utm_source=chatgpt.com",
-        "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d9-b336be3ed136210b88c3a7cecf66010f/views/imgo"
-    }
-
+  {
+    "categoria": "Biologia",
+    "nomeArtigo": "Biologia marinha",
+    "artigo": "https://www.bioicos.org.br/artigos",
+    "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d13-54fe7b090e0c4b0d42b3347d24af1e43/views/imgo"
+  },
+  {
+    "categoria": "Quimica",
+    "nomeArtigo": "Quimica orgânica",
+    "artigo": "https://www.scielo.br/j/qn/a/TnNHfB8y4R3BMzgmvnyqqSJ/",
+    "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d5-c872059e4d0638e2dc03f26aa00846fb/views/imgo"
+  },
+  {
+    "categoria": "Fisica",
+    "nomeArtigo": "Astrofisica",
+    "artigo": "https://fapesp.br/publicacoes/2015/astrofisica.pdf",
+    "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d11-4ccabcda6723b9a603f9bb405339bd52/views/imgo"
+  },
+  {
+    "categoria": "Quimica",
+    "nomeArtigo": "Cinetica",
+    "artigo": "https://econtents.bc.unicamp.br/inpec/index.php/chemkeys/article/view/18747?utm_source=chatgpt.com",
+    "urlFoto": "https://us-prod.asyncgw.teams.microsoft.com/v1/objects/0-eus-d9-b336be3ed136210b88c3a7cecf66010f/views/imgo"
+  },
+  {
+    "categoria": "Quimica",
+    "nomeArtigo": "exemplo",
+    "artigo": "exemplo",
+    "urlFoto": "exemplo"
+  }
 ]
